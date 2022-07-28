@@ -1,10 +1,18 @@
-const http = require ('http');
-const fs = require ('fs');
-const path = require('path');
+const express = require('express');
+const app = express();
+const port = 8080;
 
-const port = process.env.PORT || 8080
+app.use(express.static('public', {extensions: ['html']}));
 
-const server = http.createServer((req, res) => {
+app.get('/', (req, res) => {
+    res.send('Hello World!')
+});
+
+app.listen(port, () => {
+    console.log(`Server running at port ${port}`)
+});
+
+/*const server = http.createServer((req, res) => {
     switch (req.url) {
         case '/':
             fs.readFile(path.join(__dirname,'index.html'), buildDisplay(res, 200));
@@ -32,5 +40,5 @@ function buildDisplay(res, statusCode) {
         res.setHeader('Content-Type', 'text/html');
         res.end(content);
     };
-};
+};*/
 

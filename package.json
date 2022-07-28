@@ -1,18 +1,29 @@
 {
   "name": "basicinformationalsite",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.18.1",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "eslint": "^8.20.0",
     "nodemon": "^2.0.19"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ismaelvale/BasicInformationalSite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ismaelvale/BasicInformationalSite/issues"
+  },
+  "homepage": "https://github.com/ismaelvale/BasicInformationalSite#readme",
+  "description": ""
 }
